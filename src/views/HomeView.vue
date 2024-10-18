@@ -1,9 +1,19 @@
 <script setup>
-import TheWelcome from '../components/TheWelcome.vue'
+import LyricView from '../components/LyricView.vue'
 </script>
 
 <template>
   <main>
-    <TheWelcome />
+    <LyricView />
   </main>
 </template>
+
+<script>
+    
+</script>
+
+<style>
+
+
+
+</style>
