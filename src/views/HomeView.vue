@@ -8,12 +8,6 @@ import LyricView from '../components/LyricView.vue'
   </main>
 </template>
 
-<script>
-    
-</script>
+<script></script>
 
-<style>
-
-
-
-</style>
+<style></style>
