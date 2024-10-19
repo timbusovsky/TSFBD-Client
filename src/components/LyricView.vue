@@ -118,7 +118,7 @@ export default {
     reset() {
       this.lyrics = []
       document.body.style.backgroundColor = '#ffffff'
-      document.getElementById("input").value = ''
+      this.searchTerm = ''
     },
   },
 }
