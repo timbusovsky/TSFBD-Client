@@ -63,7 +63,12 @@ h1 {
 }
 
 img {
-  padding: 20px
+  padding: 20px;
+}
+
+#particles {
+  position: fixed;
+  z-index: -1;
 }
 
 </style>

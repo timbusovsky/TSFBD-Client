@@ -3,6 +3,7 @@
     <input
       type="text"
       id="input"
+      style="width: 300px"
       placeholder="Please enter your acronym"
       v-model.trim="searchTerm"
       @keyup.enter="search(searchTerm)"
@@ -27,23 +28,21 @@
     v-bind:key="lyric.lineId"
     v-bind:lyric="lyric"
   >
-    <p class="line">{{ lyric.lyric }}</p>
+    <p class="line" :style="{color: fontColor}">{{ lyric.lyric }}</p>
   </div>
-
 </template>
 
 <script>
 import LyricService from '../services/LyricService'
 
 export default {
-  props: {
-    
-  },
+  props: {},
   data() {
     return {
       lyrics: [],
       input: '',
       searchTerm: '',
+      fontColor: '#0000FF',
     }
   },
   computed: {},
@@ -78,17 +77,18 @@ export default {
 
       if (album === 'Taylor Swift') {
         document.body.style.backgroundColor = '#A5C9A5'
-        document.body.style.fontFamily = '"Cedarville Cursive", cursive'
+        this.fontColor = '#000000'
       }
       if (album === 'Fearless') {
         document.body.style.backgroundColor = '#EFC180'
-        document.body.style.fontFamily = 'Times New Roman'
+        this.fontColor = '#000000'
       }
       if (album === 'Speak Now') {
         document.body.style.backgroundColor = '#C7A8CB'
       }
       if (album === 'Red') {
         document.body.style.backgroundColor = '#7A2E39'
+        this.fontColor = '#ffffff'
       }
       if (album === '1989') {
         document.body.style.backgroundColor = '#B5E5F8'
@@ -165,5 +165,4 @@ p {
   justify-content: center;
   transition: color 0.5s;
 }
-
 </style>
