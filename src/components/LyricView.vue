@@ -17,7 +17,9 @@
     </button>
     <button class="reset" @click="reset()">Reset</button>
   </div>
-
+  <div>
+    <h2>Friendship Bracelet Acronym: {{ searchTerm }}</h2>
+  </div>
   <div class="album-and-song" v-if="lyrics.length > 0">
     <h2>Album: {{ lyrics[0].album }}</h2>
     <h3>Song: {{ lyrics[0].song }}</h3>
@@ -28,7 +30,7 @@
     v-bind:key="lyric.lineId"
     v-bind:lyric="lyric"
   >
-    <p class="line" :style="{color: fontColor}">{{ lyric.lyric }}</p>
+    <p class="line" :style="{ color: fontColor }">{{ lyric.lyric }}</p>
   </div>
 </template>
 
